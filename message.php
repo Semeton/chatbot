@@ -6,7 +6,7 @@ $db = mysqli_connect("localhost", "root", "", "bot") or die("Database Error");
 $getMesg = mysqli_real_escape_string($db, $_POST['text']);
 
 //checking user query to database query
-$check_data = "SELECT replies FROM chatbot WHERE queries LIKE '%$getMesg%'";
+$check_data = "SELECT replies FROM chatbot WHERE messages LIKE '%$getMesg%'";
 $run_query = mysqli_query($db, $check_data) or die("Error");
 
 // if user query matched to database query we'll show the reply otherwise it go to else statement
