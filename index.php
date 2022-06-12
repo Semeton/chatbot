@@ -54,6 +54,9 @@
                 type: 'POST',
                 data: 'text=' + $value,
                 success: function(result) {
+                    /**
+                     * Gets response from database and appends it to the chat
+                     */
                     $response =
                         '<div class="bot-inbox inbox"><div class="icon"><i class="fas fa-user"></i></div><div class="msg-header"><p>' +
                         result + '</p></div></div>';
